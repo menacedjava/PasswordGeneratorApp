@@ -36,6 +36,9 @@ public class PasswordGeneretor {
         return new String(characters);
     }
     public static void main(String[] args) {
+        int passwordLength = 12;
+        String password = generatePassword(passwordLength);
+        System.out.println("Tasodifiy parol: " + password);
 
     }
 }
