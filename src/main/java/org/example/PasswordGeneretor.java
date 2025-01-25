@@ -24,6 +24,17 @@ public class PasswordGeneretor {
 
         return shuffleString(password.toString());
     }
+    private static String shuffleString(String input) {
+        SecureRandom random = new SecureRandom();
+        char[] characters = input.toCharArray();
+        for (int i = characters.length - 1; i > 0; i--) {
+            int j = random.nextInt(i + 1);
+            char temp = characters[i];
+            characters[i] = characters[j];
+            characters[j] = temp;
+        }
+        return new String(characters);
+    }
     public static void main(String[] args) {
 
     }
